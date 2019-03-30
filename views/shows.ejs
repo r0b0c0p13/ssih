@@ -1,0 +1,141 @@
+<% include ./partials/header %>
+<div style="background-color: blue;text-align:center;font-size:40px;padding:20px;color:white;">Grievance Details</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="thumbnail">
+                <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <p> <h3 style="color: black">First Name  </h3><span style="font-size:16px;"><%=found.fname%></span></p>
+                                
+                        </div>
+
+                        <div class="col-md-6">
+
+                                <p> <h3 style="color: black">Last Name  </h3><span style="font-size:16px;"><%=found.lname%></span></p>
+                        </div>
+
+                    </div>
+
+
+                 
+                     
+
+
+                    <div class="row">
+                            <div class="col-md-6">
+
+                                <p> <h3 style="color: black">Email  </h3><span style="font-size:16px;"><%=found.email%></span></p><br>
+
+                                
+
+                                    
+                            </div>
+    
+                            <div class="col-md-6">
+                                    <p> <h3 style="color: black">mobile  </h3><span style="font-size:16px;"><%=found.mobile%></span></p><br>
+
+                                    
+                                
+    
+                            </div>
+    
+                    </div>
+
+                    <div class="row">
+                            <div class="col-md-6">
+                                    <p> <h3 style="color: black">state  </h3><span style="font-size:16px;"><%=found.state %></span></p><br>
+                                   
+    
+                            </div>
+    
+                            <div class="col-md-6">
+                                    <p> <h3 style="color: black">city  </h3><span style="font-size:16px;"><%= found.city %></span></p><br>
+                                    
+    
+                            </div>
+    
+                    </div>
+                    
+
+
+                    <div class="row">
+                            <div class="col-md-12">
+                                    <p> <h3 style="color: black">subject  </h3><span style="font-size:16px;"><%=found.subject%></span></p><br>
+    
+                            </div>
+                    </div>
+
+                    <div class="row">
+                            <div class="col-md-12">
+                                    <p> <h3 style="color: black">inquiry/comments  </h3><span style="font-size:16px;"><%=found.inquiry%></span></p><br>
+    
+                            </div>
+                    </div>
+
+                     
+                
+                    
+                     
+                     <form id="submitaction" action="/forward/<%=found._id %>" method="POST">
+                     
+                     <label for="ContentPlaceHolder1_UserEnquiry1_ddlDipartment" class="label">
+                                                      <span id="ContentPlaceHolder1_UserEnquiry1_lblDepartment"style="color: black; font-size:20px">Select department to forward</span>
+                                                  </label>
+                     <div class="fieldInput">
+                                                  <select name="department" id="ContentPlaceHolder1_UserEnquiry1_ddlDipartment" style="border-radius:10px;outline:none;">
+                                                      <option selected="selected" value="-1">Select Department</option>
+                                                      <option value="Finance">Department of Finance</option>
+                                                      <option value="Science_and_Technology">Department of Science and Technology</option>
+                                                      <option value="Labour_and_Employment">Department of Labour and Employment</option>
+                                                      <option value="Health_and_Family Welfare Department">Department of Health and Family Welfare Department</option>
+                                                      <option value="Agriculture">Department of Agriculture</option>
+                                                      </select>
+                                                  <span id="ContentPlaceHolder1_UserEnquiry1_reqDepartment" class="error" style="display:none; ">Please enter Department</span>
+                                              </div>
+                                              <div style="padding:20px;">
+                                              <button class="btn btn-xs btn-danger" type="submit" style="width:100px;">Forward</button>
+                                            </div>
+                                             <br>
+                    
+                     
+      
+                     </form>
+                     <hr>
+    <div class="row">
+        
+
+        
+
+        <div class="col-md-5">
+                 <form  action="/reject/<%=found._id %>" method="POST">
+                    <button class="btn btn-xs btn-danger" type="submit" style="float: left;width:100px;"><span class="glyphicon glyphicon-bin"></span> Reject</button>
+                  </form>
+        </div>
+
+        <div class="col-md-4">
+                <form  action="/upward/<%=found._id %>" method="POST">
+                    <button class="btn btn-xs btn-warning" type="submit"  style="width:100px;"><span class="glyphicon glyphicon-bin"></span>UPPER_LEVEL</button>
+                    </form>
+        </div>
+
+        <div class="col-md-3">
+                <form  action="/accept/<%=found._id %>" method="POST">
+                    <button class="btn btn-xs btn-success" type="submit"  style="float: right;width:100px;"><span class="glyphicon glyphicon-bin"></span> Accept</button>
+                  </form>
+            
+        </div>
+                     
+                     
+                   
+     </div> 
+                </div>
+            </div>
+            </div>
+            </div>
+            
+
+
+<% include ./partials/footer %>

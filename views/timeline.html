@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+   <link id="lnkFavicon" rel="icon" type="image/jpg" href="images/loogo.jpg">
+  <title>Startup Grievance Redressal Portal</title>
+
+  
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- Slick Carousel -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+  <!-- FancyBox -->
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css">
+  
+  <!-- Stylesheets -->
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="1.css">
+  <link rel="stylesheet" type="text/css" href="css/form.css">
+  <link rel="stylesheet" type="text/css" href="css/util.css">
+  
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+
+  <style>
+  
+.tracking-detail {
+ padding:3rem 0
+}
+#tracking {
+ margin-bottom:1rem
+}
+[class*=tracking-status-] p {
+ margin:0;
+ font-size:2rem;
+ color:#fff;
+ text-transform:uppercase;
+ text-align:center
+}
+[class*=tracking-status-] {
+ padding:1.6rem 0
+}
+.tracking-status-intransit {
+ background-color:#65aee0
+}
+.tracking-status-outfordelivery {
+ background-color:#f5a551
+}
+.tracking-status-deliveryoffice {
+ background-color:#f7dc6f
+}
+.tracking-status-delivered {
+ background-color:#4cbb87
+}
+.tracking-status-attemptfail {
+ background-color:#b789c7
+}
+.tracking-status-error,.tracking-status-exception {
+ background-color:#d26759
+}
+.tracking-status-expired {
+ background-color:#616e7d
+}
+.tracking-status-pending {
+ background-color:#ccc
+}
+.tracking-status-inforeceived {
+ background-color:#214977
+}
+.tracking-list {
+ border:1px solid #e5e5e5
+}
+.tracking-item {
+ border-left:1px solid #e5e5e5;
+ position:relative;
+ padding:2rem 1.5rem .5rem 2.5rem;
+ font-size:.9rem;
+ margin-left:3rem;
+ min-height:5rem
+}
+.tracking-item:last-child {
+ padding-bottom:4rem
+}
+.tracking-item .tracking-date {
+ margin-bottom:.4rem
+}
+.tracking-item .tracking-date span {
+ color:#888;
+ font-size:10px;
+ padding-left:.4rem
+}
+.tracking-item .tracking-content {
+ padding:.5rem .8rem;
+ background-color:#f4f4f4;
+ border-radius:.5rem
+}
+.tracking-item .tracking-content span {
+ display:block;
+ color:#888;
+ font-size:13px;
+}
+.tracking-item .tracking-icon {
+ line-height:2.6rem;
+ position:absolute;
+ left:-1.3rem;
+ width:2.6rem;
+ height:2.6rem;
+ text-align:center;
+ border-radius:50%;
+ font-size:1.1rem;
+ background-color:#48bdc5;
+ color:#fff
+}
+.tracking-item .tracking-icon.status-sponsored {
+ background-color:#f68
+}
+.tracking-item .tracking-icon.status-delivered {
+ background-color:#4cbb87
+}
+.tracking-item .tracking-icon.status-outfordelivery {
+ background-color:#48bdc5
+}
+.tracking-item .tracking-icon.status-deliveryoffice {
+ background-color:#f7dc6f
+}
+.tracking-item .tracking-icon.status-attemptfail {
+ background-color:#b789c7
+}
+.tracking-item .tracking-icon.status-exception {
+ background-color:#d26759
+}
+.tracking-item .tracking-icon.status-inforeceived {
+ background-color:#48bdc5
+}
+.tracking-item .tracking-icon.status-intransit {
+ color:#e5e5e5;
+ border:1px solid #e5e5e5;
+ font-size:.6rem
+}
+@media(min-width:992px) {
+ .tracking-item {
+  margin-left:10rem
+ }
+ .tracking-item .tracking-date {
+  position:absolute;
+  left:-10rem;
+  width:7.5rem;
+  text-align:right
+ }
+ .tracking-item .tracking-date span {
+  display:block
+ }
+ .tracking-item .tracking-content {
+  padding:0;
+  background-color:transparent
+ }
+}</style>
+
+</head>
+
+
+<body>
+  <div class="page-wrapper">
+    <!-- Preloader -->
+    <!-- <div class="preloader"></div> -->
+    <!-- Preloader -->
+
+  
+
+<!--header top-->
+<div class="header-top">
+      <div class="container clearfix">
+            <div class="top-left">
+                  <h6></h6>
+            </div>
+            <div class="top-right">
+                  <ul class="social-links">
+                        <li>
+                              <a href="#">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                              </a>
+                        </li>
+                        <li>
+                              <a href="#">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                              </a>
+                        </li>
+                        <li>
+                              <a href="#">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                              </a>
+                        </li>
+                        <li>
+                              <a href="#">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                              </a>
+                        </li>
+                        <li>
+                              <a href="#">
+                                    <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                              </a>
+                        </li>
+                  </ul>
+            </div>
+      </div>
+</div>
+<!--header top-->
+
+<!--Header Upper-->
+<section class="header-uper">
+      <div class="container clearfix">
+        <div class="row">                   
+          <div class="col-md-6">
+                        <div>
+                          <div class="row">
+                            <div class="col-md-2">
+                              <img  class="national_emblem" src="https://dipp.gov.in/sites/all/themes/dipp/images/emblem-dark.png" alt="national emblem">
+                            </div>
+
+                            <div class="col-md-10"style="font-size: 20px" >
+                                <strong lang="hi">उद्योग संवर्धन और आंतरिक व्यापार विभाग</strong>
+                                                <br><p style="font-size: 20px">
+                                              Department for Promotion of Industrial and <br>Internal Trade</p>
+                            </div>
+                          
+                                          
+                          </div>
+                              
+                        </div>
+                  </div>
+
+
+                    <div class="right-side col-md-6">
+                          <ul >
+                                <li> 
+                                      <div class="logo">
+                                      <figure>
+                                    <a href="newfile.html">
+                                          <img src="images/Startup-GP-logo-1.png" alt="" width="240"style="float: right;">
+                                          <strong style="font-size: 20px"><span style="float: right;">GRIEVANCE REDRESSAL PORTAL</span> </strong>
+                                    </a>
+                                    </figure>
+                                        </div>
+                                </li>
+                          
+                          </ul>
+                        
+                    </div>
+                </div>
+      </div>
+</section>
+</div>
+<!--Main Header-->
+<nav class="navbar navbar-default">
+      <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                  </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                        <li class="active">
+                              <a href="log.html">Home</a>
+                        </li>
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">INFORMATION CELL
+                                    <span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                    <li>
+                                          <a href="#"style="color: #3d3d3d">...</a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                          <a href="submit gre.html"style="color: #3d3d3d">...</a>
+                                    </li>
+                                    <li role="separator" class="dstyle="color: #3d3d3d"ivider"></li>
+                                    <li>
+                                          <a href="#" style="color: #3d3d3d">...</a>
+                                    </li>
+                                   
+                              </ul>
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ECOSYSTEM
+                                    <span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                    <li>
+                                          <a href="#"style="color: #3d3d3d">...</a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                          <a href="submit gre.html"style="color: #3d3d3d">...</a>
+                                    </li>
+                                    <li role="separator" class="dstyle="color: #3d3d3d"ivider"></li>
+                                    <li>
+                                          <a href="#" style="color: #3d3d3d">...</a>
+                                    </li>
+                                   
+                              </ul>
+                        </li> 
+                       <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">NOTIFICATION
+                                    <span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                    <li>
+                                          <a href="#"style="color: #3d3d3d">...</a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                          <a href="submit gre.html"style="color: #3d3d3d">...</a>
+                                    </li>
+                                    <li role="separator" class="dstyle="color: #3d3d3d"ivider"></li>
+                                    <li>
+                                          <a href="#" style="color: #3d3d3d">...</a>
+                                    </li>
+                                   
+                              </ul>
+                        </li> 
+                        
+                         <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">GRIEVANCE
+                                    <span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                    <li>
+                                          <a href="#"style="color: #3d3d3d">STARTUP GRIEVANCE MECHANISM</a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                          <a href="Detail Grievance.html"style="color: #3d3d3d">RAISE A GRIEVANCE</a>
+                                    </li>
+                                    <li role="separator" class="dstyle="color: #3d3d3d"ivider"></li>
+                                    <li>
+                                          <a href="#" style="color: #3d3d3d">TRACK YOUR GRIEVANCE</a>
+                                    </li>
+                                   
+                              </ul>
+                        </li> 
+                        <li>
+                              <a href="about.html">FAQs</a>
+                        </li>
+                         <li>
+                              <a href="about.html">About Us</a>
+                        </li>
+                        <li>
+                              <a href="contact.html">Contact Us</a>
+                        </li>
+                       
+                  </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+</nav>
+<!-- content -->
+
+
+
+
+<div class="container" style="margin-top:20px;">
+   <div class="row">
+     
+      
+      <div class="col-md-12 col-lg-12">
+         <div id="tracking-pre"></div>
+         <div id="tracking">
+            <div class="text-center tracking-status-intransit">
+               <p class="tracking-status text-tight">TRACK GRIEVANCE</p>
+            </div>
+            <div class="tracking-list">
+               <div class="tracking-item">
+                  <div class="tracking-icon status-intransit">
+                        <!-- <svg class="svg-inline--fa fa-clipboard-list fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="clipboard-list" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                            <path fill="currentColor" d="M336 64h-80c0-35.3-28.7-64-64-64s-64 28.7-64 64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM96 424c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm0-96c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm0-96c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm96-192c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm128 368c0 4.4-3.6 8-8 8H168c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H168c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H168c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16z"></path>
+                         </svg> -->
+                     
+                  </div>
+                  
+                  <div class="tracking-date">Jul 09, 2018<span>11:04 AM</span></div>
+                  <div class="tracking-content">Grievance succesfully submitted.<span>_____</span></div>
+               </div>
+               <div class="tracking-item">
+                  <div class="tracking-icon status-intransit">
+                        <!-- <svg class="svg-inline--fa fa-clipboard-list fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="clipboard-list" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                            <path fill="currentColor" d="M336 64h-80c0-35.3-28.7-64-64-64s-64 28.7-64 64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM96 424c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm0-96c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm0-96c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm96-192c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm128 368c0 4.4-3.6 8-8 8H168c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H168c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H168c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16z"></path>
+                         </svg> -->
+                     <!-- <i class="fas fa-circle"></i> -->
+                  </div>
+                  <div class="tracking-date">Jul 09, 2018<span>11:45 AM</span></div>
+                  <div class="tracking-content">Grievance Forwarded to Finance Department<span>____</span></div>
+               </div>
+               <div class="tracking-item">
+                  <div class="tracking-icon status-inforeceived">
+                     <!-- <svg class="svg-inline--fa fa-clipboard-list fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="clipboard-list" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                        <path fill="currentColor" d="M336 64h-80c0-35.3-28.7-64-64-64s-64 28.7-64 64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM96 424c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm0-96c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm0-96c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm96-192c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm128 368c0 4.4-3.6 8-8 8H168c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H168c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H168c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16z"></path>
+                     </svg> -->
+                     <!-- <i class="fas fa-clipboard-list"></i> -->
+                  </div>
+                  <div class="tracking-date">Jul 12, 2018<span>02:02 PM</span></div>
+                  <div class="tracking-content">Grievance is approved by Finance Department.<span>____</span></div>
+               </div>
+            </div>
+         </div>
+         <div class="container row">
+     
+               <button class="contact100" style="background-color: #4CAF50;padding: 12px 28px;border-radius: 4px;margin: 10px 10px 10px 10px;float: right;">
+                  <span style="color: white;">
+                      Satisfied
+                  </span>
+              </button>
+              <button class="contact100" style=" background-color: #f44336;padding: 12px 28px;border-radius: 4px;margin: 10px;float: right; ">
+                  <span style="color: white;">
+                      Query
+                  </span>
+              </button>
+
+   </div>
+      </div>
+
+
+
+   </div>
+</div>
+
+
+<!-- end-content -->
+
+
+<footer class="footer-main">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="about-widget">
+            <div class="footer-logo">
+              <figure>
+                <a href="log.html">
+                  <img src="images/Startup-GP-logo-1.png" alt="" width="130">
+                </a>
+              </figure>
+            </div>
+            <p>DEPARTMENT FOR PROMOTION OF INDUSTRY AND INTERNAL TRADE</p>
+            <ul class="location-link">
+              <li class="item">
+                <i class="fa fa-map-marker"></i>
+                <p>Udyog Bhawan, New Delhi 110011</p>
+              </li>
+              <li class="item">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <a href="#">
+                  <p>EPABX : 011-23061222,</p>
+                </a>
+              </li>
+              <li class="item">
+                <i class="fa fa-fax" aria-hidden="true"></i>
+                <p>Fax : 011-23062626</p>
+              </li>
+            </ul>
+            <ul class="list-inline social-icons">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+         
+          <ul class="menu-link">
+            <li>
+              <a href="#">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>Terms of Use</a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>Disclaimer</a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>Hyperlinking policy</a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>Accessibility Statement</a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>Sitemap</a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>help</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="social-links">
+            <h6>Recent Posts</h6>
+            <ul>
+              <li class="item">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="images/blog/post-thumb-small.jpg" alt="post-thumb">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading"><a href="#">Post Title</a></h4>
+                    <p>...................................................</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="images/blog/post-thumb-small.jpg" alt="post-thumb">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">
+                      <a href="#">Post Title</a>
+                    </h4>
+                    <p>...................................................</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container clearfix">
+      <div class="copyright-text">
+        <p>&copy; Copyright 2018. All Rights Reserved by
+          <a href="log.html">DIPP</a>
+        </p>
+      </div>
+      <ul class="footer-bottom-link">
+        <li>
+          <a href="log.html">Home</a>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<!--End footer-main-->
+
+</div>
+<!--End pagewrapper-->
+
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target=".header-top">
+  <span class="icon fa fa-angle-up"></span>
+</div>
+
+<script src="plugins/jquery.js"></script>
+<script src="plugins/bootstrap.min.js"></script>
+<script src="plugins/bootstrap-select.min.js"></script>
+<!-- Slick Slider -->
+<script src="plugins/slick/slick.min.js"></script>
+<!-- FancyBox -->
+<script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+<script src="plugins/google-map/gmap.js"></script>
+
+<script src="plugins/validate.js"></script>
+<script src="plugins/wow.js"></script>
+<script src="plugins/jquery-ui.js"></script>
+<script src="plugins/timePicker.js"></script>
+<script src="js/script.js"></script>
+</body>
+
+</html>

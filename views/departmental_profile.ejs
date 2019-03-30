@@ -1,0 +1,295 @@
+<% include ./partials/header %>
+
+<hr>
+<%if(currentUser.username[3]==4){%>
+<div class="box-content-inner container" style="color:black;">
+                               
+                                    
+       <table class="nav-justified">
+    <tbody><tr>
+        <td rowspan="7" style="width:200px; vertical-align: top;">
+            
+        <img src="images/profile_pic.png" id="ContentMainContent_ContentPlaceHolder1_rpt_facultyList_fimg_1" class="facimg" align="top" width="200" height="100"></td>
+        <td rowspan="7" style="width: 28px">&nbsp;</td>
+        <td style="height: 25px;"><b>Dept ID</b></td>
+        <td style="height: 25px"><%=currentUser.username%></td>
+        
+    </tr>
+
+    <tr>
+        <td style="vertical-align:top; height: 25px;">
+   <b>Department</b></td>
+        <td style="height: 25px"><%=currentUser.department%></td>
+    </tr>
+         
+</tbody></table>
+<hr>
+
+<div id="chartContainer" style="height: 370px; width: 100;"></div></div>
+<style>
+    #favDialog {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.checked{
+    color:orange;
+}
+</style>
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+  title: {
+    text: "Departments Response Report "
+  },
+  axisY: {
+    title: "Grievance solved",
+    suffix: " "
+  },
+  data: [{
+    type: "column", 
+    yValueFormatString: "#,### ",
+    indexLabel: "{y}",
+    dataPoints: [
+      { label: "Finance", y: 206 },
+      { label: "Science ", y: 163 },
+      { label: "Labour", y: 154 },
+      { label: "Agriculture", y: 176 }
+    ]
+  }]
+});
+
+function updateChart() {
+  var depc, yVal,labb;
+  var dps = chart.options.data[0].dataPoints;
+  for (var i = 0; i < dps.length; i++) {
+      labb =dps[i].label;
+    yVal = dps[i].y;
+    depc = yVal > 200 ? "#FF2500" : yVal >= 170 ? "#FF6000" : yVal < 170 ? "#6B8E23 " : null;
+    dps[i] = {label:labb, y: yVal, color: depc};
+  }
+  chart.options.data[0].dataPoints = dps; 
+  chart.render();
+};
+updateChart(100);
+
+setInterval(function() {updateChart()}, 500);
+
+}
+</script>
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<% } else if(currentUser.username=='nodal_officer') { %>
+<div class="box-content-inner container" style="color:black;">
+                               
+                                    
+       <table class="nav-justified">
+    <tbody><tr>
+        <td rowspan="7" style="width:200px; vertical-align: top;">
+            
+        <img src="images/profile_pic.png" id="ContentMainContent_ContentPlaceHolder1_rpt_facultyList_fimg_1" class="facimg" align="top" width="200" height="100"></td>
+        <td rowspan="7" style="width: 28px">&nbsp;</td>
+        <td style="height: 25px;"><b>Dept ID</b></td>
+        <td style="height: 25px"><%=currentUser.username%></td>
+        
+    </tr>
+
+    <tr>
+        <td style="vertical-align:top; height: 25px;">
+   <b>Department</b></td>
+        <td style="height: 25px"><%=currentUser.department%></td>
+    </tr>
+         
+</tbody></table>
+<hr>
+
+
+
+<div class="container-fluid container">
+        <table class="table table-hover table-bordered">
+            <col width="10">
+            <col width="10">
+            <col width="10">
+            <col width="10">
+            <col width="10">
+            <col width="10">
+            <col width="10">
+          <thead>
+              
+            <tr>
+              <th >Tracking ID</th>
+              <th>Firstname</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Subject</th>
+              <th>query/comment</th>
+             
+              <!-- <th>Files</th>
+              <td>Date and time</td> -->
+            </tr>
+          </thead>
+          <tbody>
+           <% for (var user of griv) { %>
+           
+        <% if(currentUser.username == user.officer[(user.officer).length-1 ]) { %>
+     
+            <tr>
+              <td> <a href="/<%= user._id %>"><%=user.track_id%></a></td>
+               <td> <a href="/<%= user._id %>"><%=user.fname%></a></td>
+              <td> <a href="/<%= user._id %>"><%=user.email%></a></td>
+              <td> <a href="/<%= user._id %>"><%=user.mobile%></a></td>
+              <td> <a href="/<%= user._id %>"><%=user.subject%></a></td>
+              <td> <a href="/<%= user._id %>"><%=user.query%></a></td>
+              
+             
+              <td>File Link</td>
+              <td>Date and Time</td> -->
+            </tr>
+           
+         <% } %>
+        <% } %>
+        
+          </tbody>
+        </table>
+      </div>
+      
+      
+<div id="chartContainer" style="height: 370px; width: 100;"></div></div>
+<style>
+    #favDialog {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.checked{
+    color:orange;
+}
+</style>
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+  title: {
+    text: "Departments Response Report "
+  },
+  axisY: {
+    title: "Grievance solved",
+    suffix: " "
+  },
+  data: [{
+    type: "column", 
+    yValueFormatString: "#,### ",
+    indexLabel: "{y}",
+    dataPoints: [
+      { label: "Finance", y: 206 },
+      { label: "Science ", y: 163 },
+      { label: "Labour", y: 154 },
+      { label: "Agriculture", y: 176 }
+    ]
+  }]
+});
+
+function updateChart() {
+  var depc, yVal,labb;
+  var dps = chart.options.data[0].dataPoints;
+  for (var i = 0; i < dps.length; i++) {
+      labb =dps[i].label;
+    yVal = dps[i].y;
+    depc = yVal > 200 ? "#FF2500" : yVal >= 170 ? "#FF6000" : yVal < 170 ? "#6B8E23 " : null;
+    dps[i] = {label:labb, y: yVal, color: depc};
+  }
+  chart.options.data[0].dataPoints = dps; 
+  chart.render();
+};
+updateChart(100);
+
+setInterval(function() {updateChart()}, 500);
+
+}
+</script>
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+      
+     
+      <% } else { %>
+<div class="box-content-inner container" style="color:black;">
+                               
+                                    
+       <table class="nav-justified">
+    <tbody><tr>
+        <td rowspan="7" style="width:200px; vertical-align: top;">
+            
+        <img src="images/profile_pic.png" id="ContentMainContent_ContentPlaceHolder1_rpt_facultyList_fimg_1" class="facimg" align="top" width="200" height="100"></td>
+        <td rowspan="7" style="width: 28px">&nbsp;</td>
+        <td style="height: 25px;"><b>Dept ID</b></td>
+        <td style="height: 25px"><%=currentUser.username%></td>
+        
+    </tr>
+
+    <tr>
+        <td style="vertical-align:top; height: 25px;">
+   <b>Department</b></td>
+        <td style="height: 25px"><%=currentUser.department%></td>
+    </tr>
+         
+</tbody></table>
+<hr>
+
+
+
+<div class="container-fluid container">
+        <table class="table table-hover table-bordered">
+            <col width="10">
+            <col width="10">
+            <col width="10">
+            <col width="10">
+            <col width="10">
+            <col width="10">
+            <col width="10">
+          <thead>
+              
+            <tr>
+              <th >Tracking ID</th>
+              <th>Firstname</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Subject</th>
+              <th>query/comment</th>
+              
+              <!-- <th>Files</th>
+              <td>Date and time</td> -->
+            </tr>
+          </thead>
+          <tbody>
+           <% for (var user of griv) { %>
+           
+        <% if(currentUser.username == user.officer[(user.officer).length-1 ]) { %>
+     
+            <tr>
+              <td> <a href="/<%= user._id %>"><%=user.track_id%></a></td>
+               <td> <a href="/<%= user._id %>"><%=user.fname%></a></td>
+              <td> <a href="/<%= user._id %>"><%=user.email%></a></td>
+              <td> <a href="/<%= user._id %>"><%=user.mobile%></a></td>
+              <td> <a href="/<%= user._id %>"><%=user.subject%></a></td>
+               <td> <a href="/<%= user._id %>"><%=user.query%></a></td>
+              <!-- <td><%=user.mobile%></td>
+              <td>File Link</td>
+              <td>Date and Time</td> -->
+            </tr>
+           
+         <% } %>
+        <% } %>
+        
+          </tbody>
+        </table>
+      </div>
+      <% } %>
+
+<% include ./partials/footer %>

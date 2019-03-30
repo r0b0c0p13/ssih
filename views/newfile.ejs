@@ -1,0 +1,213 @@
+<% include ./partials/header %>
+<form action="/register" method="POST" enctype="multipart/form-data">
+<div id="ContentPlaceHolder1_UserEnquiry1_trMain" class="feedbackForm container">
+        <p class="fieldsRequired" style="padding:5px;">
+            <span id="ContentPlaceHolder1_UserEnquiry1_lblRequired" title="Fields marked with * are required.">Fields marked with <span class="mandatory red">*</span> are required.</span></p>
+        <div class="feedBackForm row">
+            <div id="ContentPlaceHolder1_UserEnquiry1_upInformation">
+    
+                    <ul>
+                        <li>
+                            
+                            <div id="ContentPlaceHolder1_UserEnquiry1_trFirstName" class="fieldCol">
+                                <div class="fieldName">
+                                    <label for="ContentPlaceHolder1_UserEnquiry1_txtFirstName" class="label">
+                                        <span id="ContentPlaceHolder1_UserEnquiry1_lblFirstName" title="First Name" style="color: black; font-size:20px">First Name</span>
+                                        <span class="asterix">*</span>
+                                    </label>
+                                </div>
+                                <div class="fieldInput input100">
+                                    <input name="fname" type="text" maxlength="50" id="ContentPlaceHolder1_UserEnquiry1_txtFirstName" title="First Name" class="formControl">
+                                    <span id="ContentPlaceHolder1_UserEnquiry1_reqFirstName" class="error" style="display:none; font-size:20px">Please enter First Name.</span>
+                                </div>
+                            </div>
+                            <div id="ContentPlaceHolder1_UserEnquiry1_trLastName" class="fieldCol">
+                                <div class="fieldName">
+                                    <label for="ContentPlaceHolder1_UserEnquiry1_txtLastName" class="label">
+                                        <span id="ContentPlaceHolder1_UserEnquiry1_lblLastName" title="Last Name"style="color: black; font-size:20px">Last Name</span>
+                                        <span class="asterix">*</span>
+                                    </label>
+                                </div>
+                                <div class="fieldInput">
+                                    <input name="lname" type="text" maxlength="50" id="ContentPlaceHolder1_UserEnquiry1_txtLastName" title="Last Name" class="formControl">
+                                    <span id="ContentPlaceHolder1_UserEnquiry1_reqLastName" class="error" style="display:none; color: black; font-size:20px">Please enter Last Name.</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            
+                            <div id="ContentPlaceHolder1_UserEnquiry1_trEmailTo" class="fieldCol">
+                                <div class="fieldName">
+                                    <label for="ContentPlaceHolder1_UserEnquiry1_txtEmailTo" class="label">
+                                        <span id="ContentPlaceHolder1_UserEnquiry1_lblTo" title="Email"style="color: black; font-size:20px">Email</span>
+                                        <span class="asterix">*</span>
+                                    </label>
+                                </div>
+                                <div class="fieldInput">
+                                    <input name="email" type="text" maxlength="50" id="ContentPlaceHolder1_UserEnquiry1_txtEmailTo" title="Email" class="formControl">
+                                    <span id="ContentPlaceHolder1_UserEnquiry1_reqEmailTo" class="error" style="display:none; font-size:20px">Please enter Email.</span>
+                                    <span id="ContentPlaceHolder1_UserEnquiry1_revEmailId" class="error" style="display:none; font-size:20px">Please enter proper Email Id.</span>
+                                </div>
+                            </div>
+                            <div id="ContentPlaceHolder1_UserEnquiry1_trMobile" class="fieldCol">
+                                <div class="fieldName">
+                                    <label for="ContentPlaceHolder1_UserEnquiry1_txtMobile" class="label">
+                                        <span id="ContentPlaceHolder1_UserEnquiry1_lblMobile" title="Mobile"style="color: black; font-size:20px">Mobile</span>
+                                          <span class="asterix">*</span>
+                                    </label>
+                                </div>
+                                <div class="fieldInput">
+                                    <input name="mobile" type="text" maxlength="10" id="ContentPlaceHolder1_UserEnquiry1_txtMobile" title="Mobile" class="formControl">
+                                    <span id="ContentPlaceHolder1_UserEnquiry1_regMobile" class="error" style="display:none; font-size:20px">Please Enter  Mobile Number in Digits Only.</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            
+                            
+                        </li>                          
+
+
+
+                        <li class="cf field2Box">
+                            <div class="box">
+                                <div id="ContentPlaceHolder1_UserEnquiry1_trAddress" class="fieldCol">
+                                    <div class="fieldName">
+                                        <label for="ContentPlaceHolder1_UserEnquiry1_txtAddress" class="label">
+                                            <span id="ContentPlaceHolder1_UserEnquiry1_lblAddress" title="Address"style="color: black; font-size:20px">Address</span>
+                                        </label>
+                                    </div>
+                                    <div class="fieldInput">
+                                        <textarea name="address" rows="2" cols="20" id="ContentPlaceHolder1_UserEnquiry1_txtAddress" title="Address" class="formControl h100 addressBox" style="resize:none;"></textarea>
+                                        
+                                    </div>
+                                </div>
+                               </div>
+                           
+                                <div id="ContentPlaceHolder1_UserEnquiry1_trState" class="fieldCol">
+                                    <div class="fieldName">
+                                        <label for="ContentPlaceHolder1_UserEnquiry1_txtState" class="label">
+                                            <span id="ContentPlaceHolder1_UserEnquiry1_lblState" title="State"style="color: black; font-size:20px">State</span>
+                                        </label>
+                                    </div>
+                                    <div class="fieldInput">
+                                        <input name="state" type="text" maxlength="50" id="ContentPlaceHolder1_UserEnquiry1_txtState" title="State" class="formControl">
+                                    </div>
+                                </div>
+                                <div id="ContentPlaceHolder1_UserEnquiry1_trCity" class="fieldCol">
+                                    <div class="fieldName">
+                                        <label for="ContentPlaceHolder1_UserEnquiry1_txtCity" class="label">
+                                            <span id="ContentPlaceHolder1_UserEnquiry1_lblCity" title="City"style="color: black; font-size:20px">City</span>
+                                        </label>
+                                    </div>
+                                    <div class="fieldInput">
+                                        <input name="city" type="text" maxlength="50" id="ContentPlaceHolder1_UserEnquiry1_txtCity" title="City" class="formControl">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </li>
+                        
+                      
+
+
+                        
+                                      <li>
+                                        <div id="ContentPlaceHolder1_UserEnquiry1_divDipartment" class="fieldCol fieldColWide">
+                                              <div class="fieldName">
+                                                  <label for="ContentPlaceHolder1_UserEnquiry1_ddlDipartment" class="label">
+                                                      <span id="ContentPlaceHolder1_UserEnquiry1_lblDepartment"style="color: black; font-size:20px">Department</span>
+                                                      <span class="asterix">*</span>
+                                                  </label>
+                                              </div>
+                                              <div class="fieldInput">
+                                                  <select name="department" id="ContentPlaceHolder1_UserEnquiry1_ddlDipartment"  style="border-radius:10px;outline:none;">
+                                                    
+                                                      <option selected="selected" value="-1">Select Department</option>
+                                                      <option value="Finance">Department of Finance</option>
+                                                      <option value="Science_and_Technology">Department of Science and Technology</option>
+                                                      <option value="Labour_and_Employment">Department of Labour and Employment</option>
+                                                      <option value="Agriculture">Department of Agriculture</option>
+                                                      <option value="other">other</option>
+
+                                                      </select>
+                                                  <span id="ContentPlaceHolder1_UserEnquiry1_reqDepartment" class="error" style="display:none; ">Please enter Department</span>
+                                              </div>
+                                          </div>
+                                      </li>
+                                      
+
+
+
+
+                        <li>
+                            <div id="ContentPlaceHolder1_UserEnquiry1_trSubject" class="fieldCol fieldColWide">
+                                <div class="fieldName">
+                                    <label for="ContentPlaceHolder1_UserEnquiry1_txtSubject" class="label">
+                                        <span id="ContentPlaceHolder1_UserEnquiry1_lblSubject" title="Subject"style="color: black; font-size:20px">Subject</span>
+                                        <span class="asterix">*</span>
+                                    </label>
+                                </div>
+                                <div class="fieldInput">
+                                    <input name="subject" type="text" maxlength="200" id="ContentPlaceHolder1_UserEnquiry1_txtSubject" title="Subject" class="formControl">
+                                    <span id="ContentPlaceHolder1_UserEnquiry1_reqSubject" class="error" style="display:none; font-size:20px">Please enter Subject.</span>
+                                </div>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            
+                            <div id="ContentPlaceHolder1_UserEnquiry1_trComments" class="fieldCol fieldColWide userComment">
+                                <div class="fieldName">
+                                    <label for="ContentPlaceHolder1_UserEnquiry1_txtComments" class="label">
+                                        <span id="ContentPlaceHolder1_UserEnquiry1_lblComments" title="Inquiry / Comments"style="color: black; font-size:20px">Inquiry / Comments</span>
+                                        <span class="asterix">*</span>
+                                    </label>
+                                </div>
+                                <div class="fieldInput">
+                                    <textarea name="inquiry" rows="8" cols="20" id="ContentPlaceHolder1_UserEnquiry1_txtComments" title="Comments / Queries" class="formControl h100" style="border-radius:10px;"></textarea>
+                                    <span id="ContentPlaceHolder1_UserEnquiry1_reqComments" class="error" style="display:none; font-size:20px">Please enter Comments.</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="ContentPlaceHolder1_UserEnquiry1_Div2" class="fieldCol fieldColWide">
+                                <div class="fieldName">
+                                    <label for="ContentPlaceHolder1_UserEnquiry1_fuDocument" class="label">
+                                        <span id="ContentPlaceHolder1_UserEnquiry1_lblfuDocument"style="color: black; font-size:20px">Document</span>
+                                        <span class="asterix">*</span>
+                                    </label>
+                                </div>
+                                <div class="fieldInput">
+                                    <input type="file" name="upfile" id="ContentPlaceHolder1_UserEnquiry1_fuDocument">
+                                    
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            
+                        </li>
+                        
+                    </ul>
+                 
+           </div>
+
+           <div class="container-contact100-form-btn">
+              <button class="contact100-form-btn" type="submit">
+                  <span>
+                      <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+                      Submit
+                  </span>
+              </button>
+          </div>
+
+           
+        </div>
+        
+
+        
+    </div>
+    
+
+</form>
+<% include ./partials/footer %>

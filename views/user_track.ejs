@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+
+
+<div class="container">
+    <h1 style="text-align : center; ">ENTER TRACK ID</h1>
+     <div class="row">
+        <div style=" width:30%;margin:25px auto;">
+            <form action="/track_user" method="POST">
+            <div class="form-group">
+                <input class="form-control" type="text" name="track_id" placeholder="Track Id">
+            </div>    
+            
+            <div class="form-group">
+               <button class="btn btn-primary btn-large btn-block" type="submit">SUBMIT</button>
+            </div>   
+        </form>
+       </div>
+        
+    </div>
+
+</div>
+
+
+<% include ./partials/footer %>
+
