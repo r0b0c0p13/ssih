@@ -5,7 +5,7 @@ var express         =  require("express"),
     passport        =  require("passport"),
     localStrategy   =  require("passport-local"),
     mailer          =  require("./mail.js");
-    mongoose.connect("mongodb+srv://user:mongodbuser@cluster0-4p55w.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser: true });
+    mongoose.connect("mongodb://sih:sih2019@ds121415.mlab.com:21415/sih",{ useNewUrlParser: true });
     app.use(bodyParser.urlencoded({extended:true,}));
     app.set("view engine","ejs");
     app.use(express.static("public"));
